@@ -1,0 +1,28 @@
+.header{
+    /* background-color: blue; */
+    display: flex;
+}
+.logo{
+    width: 30vw;
+    font-size: 3em;
+    color: violet;
+    /* background-color: hotpink; */
+}
+.nav{
+    width: 70vw;
+    /* background-color: indigo; */
+}
+ul{
+    display: flex;
+    column-gap: 2em;
+    justify-content: flex-end;
+}
+ul li{
+    list-style-type: none;
+    font-size: 2em;
+    color: red;
+    font-weight: bold;
+}
+ul li:hover{
+    text-decoration: underline;
+}

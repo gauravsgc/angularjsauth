@@ -1,0 +1,36 @@
+<div class="container">
+    <form [formGroup]="myform"
+    (ngSubmit)="onLogin()">
+    <div>
+        <label for="name">username</label>
+        <input type="text"  formControlName="username" >
+        
+        <div *ngIf="username&&username.touched">
+            <p *ngIf="username.errors?.['required']">username is a required field!</p>
+            <p *ngIf="username.errors?.['pattern']">Please fill character only!!!</p>
+    </div>
+
+    </div>
+    <div>
+        <label for="password">userpass</label>
+        <input type="password" formControlName="userpass" >
+        <div *ngIf="userpass&&userpass.touched">
+            <span *ngIf=" userpass.errors?.['required']">
+                password is a required field!
+        </span>
+
+
+        <span *ngIf=" userpass.errors?.['minlength']">
+            please enter min 3 character
+        </span>
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Login" [disabled]="myform.invalid">
+    </div>
+    
+    </form>
+    
+    
+    </div>
+    
